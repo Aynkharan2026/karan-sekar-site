@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import myLogo from '../assets/myLogo.jpg'; // 👈 CHANGE THIS to your actual filename!
+---
+
+<Image src={myLogo} alt="Karan Sekar AI Logo" width={150} />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<h1>Karan Sekar <span class="text-gradient">AI</span></h1>
+<p class="slogan">Architecting the Future of Intelligent Automation.</p>
+
+<a href="mailto:your-email@example.com" class="cta-button">
+  Architect Your System
+</a>
+
+<style>
+  :global(body) {
+    background-color: #0B0D17; /* Midnight Obsidian */
+    color: #F0F4F8; /* Cloud Dancer White */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .text-gradient {
+    background: linear-gradient(45deg, #00A896, #FDB813);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+.cta-button {
+    margin-top: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #F0F4F8; /* Cloud Dancer White */
+    text-decoration: none;
+    border-radius: 12px;
+    
+    /* Glassmorphism Effect */
+    background: rgba(0, 168, 150, 0.15); /* Transformer Teal at 15% opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 168, 150, 0.3);
+    
+    transition: all 0.3s ease; /* Smooth micro-interaction */
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background: rgba(0, 168, 150, 0.3);
+    border-color: #FDB813; /* Bioluminescent Gold highlight on hover */
+    box-shadow: 0 0 20px rgba(0, 168, 150, 0.4);
+    transform: translateY(-3px); /* Subtle "lift" effect */
+  }
+</style>
+
