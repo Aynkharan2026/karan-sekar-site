@@ -8,7 +8,7 @@ import myLogo from '../assets/myLogo.jpg';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Karan Sekar | Real Estate Web Platforms</title>
+		<title>Karan Sekar | High-End Real Estate Web Platforms</title>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 	</head>
 	<body>
@@ -20,12 +20,15 @@ import myLogo from '../assets/myLogo.jpg';
 			<section class="hero">
 				<div class="compliance-badge">TRREB & CREA COMPLIANT</div>
 
-				<h1>Fast, Compliant Real Estate Websites That <span class="text-gradient">Generate Leads</span> — We Handle Everything for You</h1>
+				<h1>
+					Fast, Compliant Real Estate Websites<br />
+					That <span class="text-gradient">Generate Leads</span> — <span class="gold-text">We Handle Everything for You</span>
+				</h1>
 				
-				<p class="tagline">Engineered for Canadian Realtors</p>
+				<p class="tagline">Trusted by Canadian Realtors</p>
 
 				<p class="subtitle">
-					Designed for Canadian Realtors. <strong>TRREB & CREA-approved IDX</strong>, SEO-ready, automated lead capture — so you can focus on selling homes, not managing websites.
+					TRREB & CREA-approved IDX, SEO-ready, automated lead capture — we handle the technology so you can focus on selling homes.
 				</p>
 
 				<div class="cta-group">
@@ -49,27 +52,66 @@ import myLogo from '../assets/myLogo.jpg';
 					</div>
 				</div>
 			</section>
+
+			<section id="features" class="features-section">
+				<div class="section-header">
+					<h2 class="text-gradient">Core Platform Intelligence</h2>
+					<p>Advanced infrastructure engineered specifically for the Canadian Real Estate market.</p>
+				</div>
+
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">🛡️</div>
+						<h3>TRREB & CREA IDX Sync</h3>
+						<p>Direct, real-time integration with MLS® feeds. Fully compliant with Canadian board regulations, protecting your professional license.</p>
+					</div>
+
+					<div class="feature-card">
+						<div class="feature-icon">🌐</div>
+						<h3>Multilingual Dominance</h3>
+						<p>Native architecture for <strong>English, Tamil, and Spanish</strong>. Capture the diverse Ontario market with intelligent language toggling.</p>
+					</div>
+
+					<div class="feature-card">
+						<div class="feature-icon">⚡</div>
+						<h3>Automated Asset Sync</h3>
+						<p>When you list, the platform works. Automatic synchronization across social media, email newsletters, and lead portals.</p>
+					</div>
+
+					<div class="feature-card">
+						<div class="feature-icon">🧠</div>
+						<h3>AI Lead Synthesis</h3>
+						<p>Integrated AI workflows that qualify every lead, scoring their intent so you only spend time on high-probability transactions.</p>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer>
+			<p>&copy; 2026 Karan Sekar Web Platform Agency. All Rights Reserved.</p>
+		</footer>
 	</body>
 </html>
 
 <style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	:global(body) {
 		background-color: #0B0D17;
 		color: #F0F4F8;
 		font-family: 'Inter', sans-serif;
 		margin: 0;
 		padding: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
-	header { padding: 2rem; width: 100%; max-width: 1100px; }
+	header { padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; box-sizing: border-box;}
 
+	/* --- Hero Section --- */
 	.hero {
 		text-align: center;
-		padding: 4rem 1rem;
+		padding: 4rem 1rem 8rem 1rem;
 		max-width: 1100px;
 		margin: 0 auto;
 	}
@@ -88,25 +130,10 @@ import myLogo from '../assets/myLogo.jpg';
 	}
 
 	h1 {
-		font-size: clamp(2.2rem, 5vw, 3.8rem);
-		line-height: 1.1;
+		font-size: clamp(2.2rem, 5vw, 3.6rem);
+		line-height: 1.2;
 		font-weight: 800;
-		margin-bottom: 1rem;
-	}
-
-	.tagline {
-		font-size: 1.2rem;
-		color: #FDB813;
-		font-weight: 600;
-		margin-bottom: 2rem;
-	}
-
-	.subtitle {
-		font-size: 1.25rem;
-		line-height: 1.7;
-		max-width: 850px;
-		margin: 0 auto 3rem auto;
-		opacity: 0.85;
+		margin-bottom: 1.5rem;
 	}
 
 	.text-gradient {
@@ -115,12 +142,31 @@ import myLogo from '../assets/myLogo.jpg';
 		-webkit-text-fill-color: transparent;
 	}
 
+	.gold-text { color: #FDB813; }
+
+	.tagline {
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 600;
+		margin-bottom: 2rem;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.subtitle {
+		font-size: clamp(1.1rem, 2vw, 1.25rem);
+		line-height: 1.7;
+		max-width: 800px;
+		margin: 0 auto 3rem auto;
+		opacity: 0.9;
+	}
+
 	.cta-group {
 		display: flex;
 		gap: 1.5rem;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-bottom: 5rem;
+		margin-bottom: 6rem;
 	}
 
 	.cta-button {
@@ -130,7 +176,13 @@ import myLogo from '../assets/myLogo.jpg';
 		border-radius: 10px;
 		font-weight: bold;
 		text-decoration: none;
-		transition: 0.3s;
+		transition: all 0.3s ease;
+	}
+
+	.cta-button:hover {
+		background: #008f7d;
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0, 168, 150, 0.3);
 	}
 
 	.secondary-button {
@@ -142,9 +194,9 @@ import myLogo from '../assets/myLogo.jpg';
 		transition: 0.3s;
 	}
 
-	.cta-button:hover { background: #FDB813; transform: translateY(-2px); }
+	.secondary-button:hover { border-color: #FDB813; color: #FDB813; }
 
-	/* Mockup Styles */
+	/* --- Mockup Motion --- */
 	.mockup-container {
 		background: #1A1D2B;
 		border-radius: 15px;
@@ -153,13 +205,17 @@ import myLogo from '../assets/myLogo.jpg';
 		max-width: 700px;
 		margin: 0 auto;
 		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+		transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.mockup-container:hover {
+		transform: translateY(-15px) rotateX(2deg) rotateY(-2deg);
 	}
 
 	.mockup-header {
 		background: rgba(255, 255, 255, 0.05);
 		padding: 0.75rem 1rem;
-		display: flex;
-		gap: 8px;
+		display: flex; gap: 8px;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
@@ -167,7 +223,6 @@ import myLogo from '../assets/myLogo.jpg';
 	.red { background: #FF5F56; } .yellow { background: #FFBD2E; } .green { background: #27C93F; }
 
 	.mockup-content { padding: 1.5rem; background: #0B0D17; }
-	
 	.listing-preview {
 		background: rgba(255, 255, 255, 0.03);
 		border-radius: 12px;
@@ -179,10 +234,34 @@ import myLogo from '../assets/myLogo.jpg';
 	.listing-image {
 		height: 180px;
 		background: linear-gradient(45deg, #1A1D2B, #00A896);
+		transition: background 0.5s ease;
+	}
+
+	.mockup-container:hover .listing-image {
+		background: linear-gradient(45deg, #00A896, #FDB813);
 	}
 
 	.listing-details { padding: 1.2rem; }
 	.price { font-size: 1.4rem; font-weight: 800; color: #FDB813; }
 	.address { opacity: 0.7; margin: 0.4rem 0; font-size: 0.9rem; }
 	.stats { font-size: 0.85rem; color: #00A896; font-weight: bold; }
-</style>
+
+	/* --- Features Section --- */
+	.features-section {
+		padding: 8rem 1rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.section-header { text-align: center; margin-bottom: 4rem; }
+	.section-header h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+	.section-header p { opacity: 0.7; font-size: 1.1rem; }
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.feature-card {
