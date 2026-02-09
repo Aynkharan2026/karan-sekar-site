@@ -1,72 +1,188 @@
 ---
 import { Image } from 'astro:assets';
-import myLogo from '../assets/myLogo.jpg'; // 👈 CHANGE THIS to your actual filename!
+import myLogo from '../assets/myLogo.jpg'; 
 ---
 
-<Image src={myLogo} alt="Karan Sekar AI Logo" width={150} />
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Karan Sekar | Real Estate Web Platforms</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<Image src={myLogo} alt="Karan Sekar AI Logo" width={60} />
+		</header>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+		<main>
+			<section class="hero">
+				<div class="compliance-badge">TRREB & CREA COMPLIANT</div>
 
-<h1>Karan Sekar <span class="text-gradient">AI</span></h1>
-<p class="slogan">Architecting the Future of Intelligent Automation.</p>
+				<h1>Fast, Compliant Real Estate Websites That <span class="text-gradient">Generate Leads</span> — We Handle Everything for You</h1>
+				
+				<p class="tagline">Engineered for Canadian Realtors</p>
 
-<a href="mailto:your-email@example.com" class="cta-button">
-  Architect Your System
-</a>
+				<p class="subtitle">
+					Designed for Canadian Realtors. <strong>TRREB & CREA-approved IDX</strong>, SEO-ready, automated lead capture — so you can focus on selling homes, not managing websites.
+				</p>
+
+				<div class="cta-group">
+					<a href="/contact" class="cta-button">Get Your Demo Site Today</a>
+					<a href="#features" class="secondary-button">See Features →</a>
+				</div>
+
+				<div class="mockup-container">
+					<div class="mockup-header">
+						<div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+					</div>
+					<div class="mockup-content">
+						<div class="listing-preview">
+							<div class="listing-image"></div>
+							<div class="listing-details">
+								<div class="price">$1,250,000</div>
+								<div class="address">123 Bay Street, Toronto, ON</div>
+								<div class="stats">4 Bed | 3 Bath | TRREB Integrated</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
 
 <style>
-  :global(body) {
-    background-color: #0B0D17; /* Midnight Obsidian */
-    color: #F0F4F8; /* Cloud Dancer White */
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    text-align: center;
-  }
+	:global(body) {
+		background-color: #0B0D17;
+		color: #F0F4F8;
+		font-family: 'Inter', sans-serif;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  h1 {
-    font-size: 3rem;
-    margin-top: 2rem;
-  }
+	header { padding: 2rem; width: 100%; max-width: 1100px; }
 
-  .text-gradient {
-    background: linear-gradient(45deg, #00A896, #FDB813);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+	.hero {
+		text-align: center;
+		padding: 4rem 1rem;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
 
-  p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-  }
-.cta-button {
-    margin-top: 2.5rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #F0F4F8; /* Cloud Dancer White */
-    text-decoration: none;
-    border-radius: 12px;
-    
-    /* Glassmorphism Effect */
-    background: rgba(0, 168, 150, 0.15); /* Transformer Teal at 15% opacity */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 168, 150, 0.3);
-    
-    transition: all 0.3s ease; /* Smooth micro-interaction */
-    cursor: pointer;
-  }
+	.compliance-badge {
+		display: inline-block;
+		padding: 0.4rem 1.2rem;
+		background: rgba(0, 168, 150, 0.1);
+		border: 1px solid rgba(0, 168, 150, 0.4);
+		color: #00A896;
+		border-radius: 50px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		margin-bottom: 2rem;
+	}
 
-  .cta-button:hover {
-    background: rgba(0, 168, 150, 0.3);
-    border-color: #FDB813; /* Bioluminescent Gold highlight on hover */
-    box-shadow: 0 0 20px rgba(0, 168, 150, 0.4);
-    transform: translateY(-3px); /* Subtle "lift" effect */
-  }
+	h1 {
+		font-size: clamp(2.2rem, 5vw, 3.8rem);
+		line-height: 1.1;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+
+	.tagline {
+		font-size: 1.2rem;
+		color: #FDB813;
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		line-height: 1.7;
+		max-width: 850px;
+		margin: 0 auto 3rem auto;
+		opacity: 0.85;
+	}
+
+	.text-gradient {
+		background: linear-gradient(45deg, #00A896, #FDB813);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.cta-group {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 5rem;
+	}
+
+	.cta-button {
+		background: #00A896;
+		color: white;
+		padding: 1.1rem 2.2rem;
+		border-radius: 10px;
+		font-weight: bold;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	.secondary-button {
+		color: white;
+		padding: 1.1rem 2.2rem;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 10px;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	.cta-button:hover { background: #FDB813; transform: translateY(-2px); }
+
+	/* Mockup Styles */
+	.mockup-container {
+		background: #1A1D2B;
+		border-radius: 15px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		overflow: hidden;
+		max-width: 700px;
+		margin: 0 auto;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+	}
+
+	.mockup-header {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 0.75rem 1rem;
+		display: flex;
+		gap: 8px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.dot { width: 10px; height: 10px; border-radius: 50%; }
+	.red { background: #FF5F56; } .yellow { background: #FFBD2E; } .green { background: #27C93F; }
+
+	.mockup-content { padding: 1.5rem; background: #0B0D17; }
+	
+	.listing-preview {
+		background: rgba(255, 255, 255, 0.03);
+		border-radius: 12px;
+		text-align: left;
+		overflow: hidden;
+		border: 1px solid rgba(0, 168, 150, 0.2);
+	}
+
+	.listing-image {
+		height: 180px;
+		background: linear-gradient(45deg, #1A1D2B, #00A896);
+	}
+
+	.listing-details { padding: 1.2rem; }
+	.price { font-size: 1.4rem; font-weight: 800; color: #FDB813; }
+	.address { opacity: 0.7; margin: 0.4rem 0; font-size: 0.9rem; }
+	.stats { font-size: 0.85rem; color: #00A896; font-weight: bold; }
 </style>
-
