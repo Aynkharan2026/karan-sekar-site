@@ -1,0 +1,150 @@
+---
+import { Image } from 'astro:assets';
+import myLogo from '../assets/myLogo.jpg'; 
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Karan Sekar | High-Performance Real Estate Platforms</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<Image src={myLogo} alt="Karan Sekar Logo" width={50} />
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="badge-container">
+					<span class="compliance-badge">TRREB & CREA COMPLIANT</span>
+				</div>
+
+				<h1>
+					Fast, Compliant Real Estate Websites<br />
+					That <span class="text-gradient">Generate Leads</span> — <span class="gold-text">We Handle Everything</span>
+				</h1>
+
+				<p class="tagline">Trusted by Canadian Realtors</p>
+
+				<p class="description">
+					TRREB & CREA-approved IDX, SEO-ready architecture, and automated lead capture — 
+					so you can focus on selling homes, not managing websites.
+				</p>
+
+				<div class="cta-group">
+					<a href="/contact" class="primary-btn">Get Your Demo Site Today</a>
+					<a href="#intelligence" class="secondary-btn">See Platform Specs →</a>
+				</div>
+
+				<div class="platform-mockup">
+					<div class="mockup-bar">
+						<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+					</div>
+					<div class="mockup-body">
+						<div class="listing-card">
+							<div class="listing-img"></div>
+							<div class="listing-info">
+								<p class="listing-price">$1,250,000</p>
+								<p class="listing-address">123 Bay Street, Toronto, ON</p>
+								<p class="listing-meta">4 Bed · 3 Bath · TRREB Integrated</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="divider" />
+
+			<section id="intelligence" class="intelligence">
+				<div class="section-header">
+					<h2 class="text-gradient">Core Platform Intelligence</h2>
+					<p class="section-subtitle">Built for Compliance, Speed, and Lead Conversion — Not Plugins</p>
+				</div>
+
+				<div class="intel-grid">
+					<div class="intel-card">
+						<div class="icon">🔄</div>
+						<h3>TRREB IDX Sync Engine</h3>
+						<p>Direct, real-time integration with MLS® feeds. We eliminate manual listing entries with a high-performance engine that ensures your data is <strong>always accurate and Board-compliant</strong>.</p>
+					</div>
+
+					<div class="intel-card">
+						<div class="icon">🧠</div>
+						<h3>Automated Lead Intelligence</h3>
+						<p>Integrated AI workflows that capture, qualify, and score lead intent. Our platform automatically syncs your listings to social channels and newsletters <strong>the moment they go live</strong>.</p>
+					</div>
+
+					<div class="intel-card">
+						<div class="icon">🛡️</div>
+						<h3>Compliance & Security Layer</h3>
+						<p>Engineered for Canadian law. Native <strong>CASL and PIPEDA compliance</strong> baked into every form and database, protecting your license and your clients' data privacy from day one.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Karan Sekar Platform Agency. All Rights Reserved.</p>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:global(html) { scroll-behavior: smooth; }
+	:global(body) {
+		background: radial-gradient(circle at top, #0d1224 0%, #070b14 100%);
+		color: #f8fafc;
+		font-family: 'Inter', sans-serif;
+		margin: 0;
+	}
+
+	header { padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;}
+
+	/* --- Hero Styles --- */
+	.hero { text-align: center; padding: 5rem 1.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+	.compliance-badge { background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #34d399; padding: 0.5rem 1.2rem; border-radius: 99px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; }
+	h1 { font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.2; font-weight: 800; margin: 2.5rem 0 1rem; }
+	.text-gradient { background: linear-gradient(to right, #34d399, #a3e635); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #34d399; }
+	.gold-text { color: #fbbf24; }
+	.tagline { color: #94a3b8; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 0.9rem; margin-top: 1rem; }
+	.description { font-size: 1.2rem; color: #cbd5e1; max-width: 800px; margin: 2rem auto 3.5rem; line-height: 1.8; }
+	
+	.cta-group { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+	.primary-btn { background: #10b981; color: #000; padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 800; text-decoration: none; transition: 0.3s; }
+	.primary-btn:hover { background: #34d399; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+	.secondary-btn { border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; transition: 0.3s; font-weight: 600; }
+
+	/* --- Mockup Style --- */
+	.platform-mockup { margin-top: 5rem; background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.7); max-width: 800px; margin-left: auto; margin-right: auto; }
+	.mockup-bar { background: #0f172a; padding: 1rem; display: flex; gap: 10px; }
+	.dot { width: 12px; height: 12px; border-radius: 50%; }
+	.red { background: #ef4444; } .yellow { background: #fbbf24; } .green { background: #22c55e; }
+	.mockup-body { padding: 3rem; text-align: left; background: #070b14; }
+	.listing-card { max-width: 450px; background: #111827; border-radius: 12px; overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.3); }
+	.listing-img { height: 200px; background: linear-gradient(135deg, #1e293b 0%, #064e3b 100%); }
+	.listing-info { padding: 2rem; }
+	.listing-price { font-size: 2rem; font-weight: 800; color: #fbbf24; margin: 0; }
+	.listing-address { color: #94a3b8; margin: 0.7rem 0; }
+	.listing-meta { color: #34d399; font-weight: 700; font-size: 0.9rem; }
+
+	/* --- Intelligence Section --- */
+	.intelligence { padding: 8rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+	.section-header { text-align: center; margin-bottom: 5rem; }
+	.section-header h2 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+	.section-subtitle { font-size: 1.2rem; color: #94a3b8; font-weight: 600; }
+	
+	.intel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+	.intel-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4rem 2.5rem; border-radius: 24px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+	.intel-card:hover { border-color: #fbbf24; transform: translateY(-10px); background: rgba(255, 255, 255, 0.05); }
+	.icon { font-size: 3rem; margin-bottom: 2rem; }
+	.intel-card h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 1.5rem; }
+	.intel-card p { line-height: 1.8; color: #94a3b8; font-size: 1.05rem; }
+	strong { color: #34d399; }
+
+	.divider { border: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent); margin: 4rem 0; }
+
+	footer { text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; }
+</style>
