@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import myLogo from '../assets/myLogo.jpg';
+import Hero from '../components/Hero.astro';
 ---
 
 <html lang="en">
@@ -8,90 +7,114 @@ import myLogo from '../assets/myLogo.jpg';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Contact | Karan Sekar AI</title>
+		<title>Contact | Karan Sekar Platform Agency</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<header>
-            <a href="/"><Image src={myLogo} alt="Logo" width={60} /></a>
-        </header>
-
 		<main>
-			<h1>Initiate <span class="text-gradient">Protocol</span></h1>
-			<p>Secure a consultation for your AI transformation.</p>
+			<section class="contact-hero">
+				<h1 class="text-gradient">Begin Your Architecture Session</h1>
+				<p>Ready to automate your global reach? Let's build your infrastructure.</p>
+			</section>
 
-			<form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-				<input type="text" name="name" placeholder="Name/Agency" required />
-				<input type="email" name="email" placeholder="hello@karansekar.com" required />
-				<textarea name="message" placeholder="To architect the digital backbone of modern industries by bridging the gap between legacy tradition and the limitless potential of Edge-computing and AI-driven automation." rows="5" required></textarea>
-				<button type="submit" class="cta-button">Send Transmission</button>
-			</form>
+			<section class="contact-container">
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="name">Full Name</label>
+						<input type="text" id="name" name="name" placeholder="Aynkharan Kulasekarampillai" required />
+					</div>
+					
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" placeholder="karan@example.com" required />
+					</div>
+
+					<div class="form-group">
+						<label for="market">Primary Market Language</label>
+						<select id="market" name="market">
+							<option value="english">English</option>
+							<option value="tamil">Tamil (தமிழ்)</option>
+							<option value="mandarin">Mandarin (普通话)</option>
+							<option value="spanish">Spanish (Español)</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Project Vision</label>
+						<textarea id="message" name="message" rows="5" placeholder="Tell me about the platform you want to build..."></textarea>
+					</div>
+
+					<button type="submit" class="primary-btn">Send Message</button>
+				</form>
+			</section>
 		</main>
+
+		<footer>
+			<a href="/" class="back-link">← Back to Home</a>
+		</footer>
 	</body>
 </html>
 
 <style>
 	:global(body) {
-		background-color: #0B0D17;
-		color: #F0F4F8;
+		background: #070b14;
+		color: #f8fafc;
 		font-family: 'Inter', sans-serif;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		margin: 0;
-		padding: 2rem;
 	}
 
-	header { width: 100%; max-width: 800px; margin-bottom: 4rem; }
-
-	main { text-align: center; max-width: 600px; width: 100%; }
-
-	h1 { font-size: 3rem; }
-
-	.text-gradient {
-		background: linear-gradient(45deg, #00A896, #FDB813);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+	.contact-hero { text-align: center; padding: 6rem 1.5rem 2rem; }
+	h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+	
+	.text-gradient { 
+		background: linear-gradient(to right, #34d399, #a3e635); 
+		-webkit-background-clip: text; 
+		background-clip: text; 
+		-webkit-text-fill-color: transparent; 
+		color: #34d399; 
 	}
 
-	form {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		margin-top: 3rem;
-		background: rgba(255, 255, 255, 0.03);
-		padding: 2rem;
-		border-radius: 20px;
-		border: 1px solid rgba(0, 168, 150, 0.2);
-	}
-
-	input, textarea {
-		background: rgba(255, 255, 255, 0.05);
+	.contact-container { max-width: 600px; margin: 0 auto; padding: 4rem 1.5rem; }
+	
+	.contact-form {
+		background: rgba(255, 255, 255, 0.02);
+		padding: 3rem;
+		border-radius: 24px;
 		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.form-group { margin-bottom: 2rem; }
+	
+	label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #94a3b8; font-size: 0.9rem; }
+	
+	input, select, textarea {
+		width: 100%;
 		padding: 1rem;
+		background: #0d1224;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
 		color: white;
-		border-radius: 8px;
 		font-family: inherit;
+		box-sizing: border-box;
 	}
 
-	input:focus, textarea:focus {
-		outline: none;
-		border-color: #00A896;
-		background: rgba(0, 168, 150, 0.05);
-	}
+	input:focus, textarea:focus { border-color: #34d399; outline: none; }
 
-	.cta-button {
-		background: #00A896;
-		color: white;
+	.primary-btn { 
+		width: 100%;
+		background: #10b981; 
+		color: #000; 
+		padding: 1.2rem; 
+		border-radius: 12px; 
+		font-weight: 800; 
 		border: none;
-		padding: 1rem;
-		border-radius: 8px;
-		font-weight: bold;
 		cursor: pointer;
 		transition: 0.3s;
 	}
 
-	.cta-button:hover {
-		background: #FDB813;
-		transform: scale(1.02);
-	}
+	.primary-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+	footer { text-align: center; padding: 4rem; }
+	.back-link { color: #94a3b8; text-decoration: none; font-weight: 600; }
+	.back-link:hover { color: #fff; }
 </style>
