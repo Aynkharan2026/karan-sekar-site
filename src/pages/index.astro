@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import myLogo from '../assets/myLogo.jpg'; 
+import myLogo from '../assets/myLogo.jpg';
+import Hero from '../components/Hero.astro';
+import GlobalEdge from '../components/GlobalEdge.astro';
+import Intelligence from '../components/Intelligence.astro';
 ---
 
 <html lang="en">
@@ -8,7 +11,7 @@ import myLogo from '../assets/myLogo.jpg';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Karan Sekar | High-Performance Multilingual Platforms</title>
+		<title>Karan Sekar | High-Performance Global Platforms</title>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 	</head>
 	<body>
@@ -17,112 +20,13 @@ import myLogo from '../assets/myLogo.jpg';
 		</header>
 
 		<main>
-			<section class="hero">
-				<div class="badge-container">
-					<span class="agency-badge">AI-DRIVEN INFRASTRUCTURE</span>
-				</div>
-
-				<h1>
-					Architecting High-Performance Platforms<br />
-					For a <span class="text-gradient">Global Market</span> — We Handle the Complexity
-				</h1>
-
-				<p class="tagline">Engineered for the Modern Professional</p>
-
-				<p class="description">
-					Specializing in fast, secure, and automated web systems with native support for the languages that drive your business.
-				</p>
-
-				<div class="cta-group">
-					<a href="/contact" class="primary-btn">Start Your Project</a>
-					<a href="#advantage" class="secondary-btn">Explore the Global Edge →</a>
-				</div>
-			</section>
-
-			<section id="advantage" class="global-advantage">
-				<div class="advantage-header">
-					<h2 class="text-gradient">The Multilingual Mastery</h2>
-					<p>Ontario isn't just one market. It’s a global intersection.</p>
-				</div>
-
-				<div class="language-showcase">
-					<div class="lang-card">
-						<span class="lang-label">English</span>
-						<h3>Universal Reach</h3>
-						<p>High-conversion SEO and clean, authoritative copy for a global audience.</p>
-					</div>
-					<div class="lang-card highlight">
-						<span class="lang-label">Tamil | தமிழ்</span>
-						<h3>Community Authority</h3>
-						<p>Native architecture for the South Asian market, ensuring cultural nuance and local trust.</p>
-					</div>
-					<div class="lang-card">
-						<span class="lang-label">Spanish | Español</span>
-						<h3>Expanding Markets</h3>
-						<p>Tapping into the fastest-growing professional networks in North America.</p>
-					</div>
-				</div>
-
-				<p class="edge-note">
-					We don't just translate words; we <strong>architect native experiences</strong>. Our platforms use intelligent language toggling to serve the right content to the right lead, every time.
-				</p>
-			</section>
-
-			<section class="intelligence">
-				<div class="section-header">
-					<h2 class="text-gradient">Platform Intelligence</h2>
-				</div>
-				<div class="intel-grid">
-					<div class="intel-card">
-						<div class="icon">🧠</div>
-						<h3>AI Automation</h3>
-						<p>Integrated workflows that capture and qualify leads while you sleep. We automate the repetitive, so you can focus on the strategic.</p>
-					</div>
-					<div class="intel-card">
-						<div class="icon">🛡️</div>
-						<h3>Privacy by Design</h3>
-						<p>Native CASL and PIPEDA compliance baked into every form, protecting your professional reputation and your clients' data.</p>
-					</div>
-					<div class="intel-card">
-						<div class="icon">⚡</div>
-						<h3>Edge Performance</h3>
-						<p>Built on Astro for lightning-fast load times. We ensure your platform outperforms the competition on every device.</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="roadmap">
-				<h2 class="text-gradient">The Path to Launch</h2>
-				<div class="steps-grid">
-					<div class="step">
-						<span class="step-num">01</span>
-						<h3>Blueprint</h3>
-						<p>We analyze your target market and technical requirements to map your custom infrastructure.</p>
-					</div>
-					<div class="step">
-						<span class="step-num">02</span>
-						<h3>Build</h3>
-						<p>We develop your automated workflows and native multilingual content architecture.</p>
-					</div>
-					<div class="step">
-						<span class="step-num">03</span>
-						<h3>Deploy</h3>
-						<p>Your platform goes live with full technical maintenance and lead-capture systems active.</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="final-cta">
-				<div class="cta-box">
-					<h2>Ready to Connect with Your Market?</h2>
-					<p>Build the infrastructure your professional brand deserves.</p>
-					<a href="/contact" class="primary-btn">Begin Your Architecture Session</a>
-				</div>
-			</section>
+			<Hero />
+			<GlobalEdge />
+			<Intelligence />
 		</main>
 
 		<footer>
-			<p>&copy; 2026 Karan Sekar Platform Agency. All Rights Reserved.</p>
+			<p>&copy; 2026 Karan Sekar Agency. All Rights Reserved.</p>
 		</footer>
 	</body>
 </html>
@@ -136,39 +40,5 @@ import myLogo from '../assets/myLogo.jpg';
 		margin: 0;
 	}
 	header { padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;}
-
-	/* Shared Components */
-	.text-gradient { background: linear-gradient(to right, #34d399, #a3e635); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #34d399; }
-	.primary-btn { background: #10b981; color: #000; padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; }
-	.primary-btn:hover { background: #34d399; transform: translateY(-3px); }
-
-	/* Hero Styles */
-	.hero { text-align: center; padding: 8rem 1.5rem 4rem; max-width: 1100px; margin: 0 auto; }
-	.agency-badge { background: rgba(52, 211, 153, 0.1); border: 1px solid #10b981; color: #34d399; padding: 0.5rem 1.2rem; border-radius: 99px; font-size: 0.8rem; font-weight: 700; }
-	.hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.2; margin: 2rem 0; }
-	.tagline { color: #94a3b8; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
-	.description { font-size: 1.2rem; color: #cbd5e1; max-width: 750px; margin: 0 auto 3rem; line-height: 1.8; }
-	.cta-group { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-	.secondary-btn { border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; padding: 1.2rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-
-	/* Multilingual Mastery Section */
-	.global-advantage { padding: 8rem 1.5rem; text-align: center; max-width: 1200px; margin: 0 auto; background: rgba(16, 185, 129, 0.02); border-radius: 40px; }
-	.advantage-header h2 { font-size: 3rem; margin-bottom: 1rem; }
-	.language-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 4rem 0; }
-	.lang-card { padding: 3rem 2rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; text-align: left; }
-	.lang-card.highlight { border-color: #fbbf24; background: rgba(251, 191, 36, 0.03); }
-	.lang-label { color: #fbbf24; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
-	.lang-card h3 { margin: 1rem 0; font-size: 1.5rem; }
-	.edge-note { max-width: 800px; margin: 3rem auto 0; font-size: 1.1rem; opacity: 0.8; line-height: 1.6; }
-
-	/* Intel & Roadmap */
-	.intelligence, .roadmap, .final-cta { padding: 8rem 1.5rem; text-align: center; max-width: 1100px; margin: 0 auto; }
-	.intel-grid, .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
-	.intel-card, .step { padding: 3rem 2rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; text-align: left; }
-	.icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
-	.step-num { font-size: 3rem; font-weight: 800; opacity: 0.1; display: block; margin-bottom: 1rem; }
-
-	.cta-box { background: linear-gradient(rgba(16, 185, 129, 0.1), transparent); border: 1px solid rgba(16, 185, 129, 0.2); padding: 5rem 2rem; border-radius: 30px; }
-
-	footer { padding: 4rem; text-align: center; opacity: 0.3; border-top: 1px solid rgba(255,255,255,0.05); }
+	footer { text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
 </style>
