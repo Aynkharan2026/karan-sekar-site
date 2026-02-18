@@ -1,0 +1,83 @@
+---
+// Clean, Elegant Coming Soon Page for RentyCars.ca
+// This uses your existing layout or a simple blank slate.
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>RentyCars.ca | Coming Soon</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-white text-black font-['Inter'] antialiased">
+		
+		<main class="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+			
+			<div class="mb-12">
+				<img 
+					src="/RentyCars Logo.png" 
+					alt="RentyCars Logo" 
+					class="h-24 md:h-32 object-contain mx-auto"
+				/>
+			</div>
+
+			<div class="max-w-2xl text-center space-y-8">
+				
+				<h1 class="font-['Playfair_Display'] text-5xl md:text-7xl italic tracking-tight">
+					Coming Soon
+				</h1>
+
+				<div class="space-y-4 text-lg md:text-xl font-light leading-relaxed text-gray-800">
+					<p class="font-semibold text-black text-2xl">
+						Welcome to the future home of RentyCars.
+					</p>
+					<p>
+						Our website and services are currently under development. <br class="hidden md:block" />
+						We’re preparing for launch and completing our setup and insurance approval process.
+					</p>
+				</div>
+
+				<div class="w-16 h-px bg-gray-300 mx-auto my-12"></div>
+
+				<div class="space-y-6">
+					<h2 class="uppercase tracking-[0.2em] text-sm font-semibold text-gray-500">
+						Stay Connected
+					</h2>
+					<p class="text-lg">
+						For inquiries or partnership opportunities:
+					</p>
+					<div class="flex flex-col space-y-2">
+						<a href="mailto:hello@rentycars.ca" class="text-xl md:text-2xl font-medium hover:text-gray-600 transition-colors">
+							hello@rentycars.ca
+						</a>
+						<a href="tel:4168287272" class="text-xl md:text-2xl font-medium hover:text-gray-600 transition-colors">
+							416-828-7272
+						</a>
+					</div>
+				</div>
+
+				<div class="pt-16">
+					<p class="text-sm text-gray-400 italic">
+						Thank you for visiting. Please check back soon for updates.
+					</p>
+				</div>
+
+			</div>
+		</main>
+
+	</body>
+</html>
+
+<style is:global>
+	/* Ensures a smooth fade-in effect on load */
+	body {
+		animation: fadeIn 1.2s ease-in-out;
+	}
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+</style>
