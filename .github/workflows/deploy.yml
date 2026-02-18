@@ -19,5 +19,5 @@ jobs:
         run: npm install
       - name: Build Astro
         run: npm run build
-      - name: Deploy to GitHub Pages
+      - name: Upload and Deploy
         uses: actions/deploy-pages@v4
