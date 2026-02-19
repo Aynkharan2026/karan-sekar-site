@@ -1,8 +1,6 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://karansekar.com',
-  integrations: [tailwind()],
-  output: 'static',
+  site: "https://aynkharan2026.github.io",
+  base: "/karan-sekar-site",
 });

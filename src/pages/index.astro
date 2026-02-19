@@ -1,26 +1,86 @@
 ---
-import Hero from '../components/Hero.astro';
-import GlobalEdge from '../components/GlobalEdge.astro';
-import Intelligence from '../components/Intelligence.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import GlobalEdge from "../components/GlobalEdge.astro";
+import Intelligence from "../components/Intelligence.astro";
+
+const BASE = import.meta.env.BASE_URL;
 ---
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Karan Sekar | High-Performance Global Platforms</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    </head>
-    <body style="background: #070b14; color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0;">
-        <header style="padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto;">
-            <img src="/my-logo.jpg" alt="Karan Sekar Logo" style="width: 100px;" />
-        </header>
-        <main>
-            <Hero />
-            <GlobalEdge />
-            <Intelligence />
-        </main>
-        <footer style="text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05);">
-            <p>&copy; 2026 Karan Sekar Agency. All Rights Reserved.</p>
-        </footer>
-    </body>
-</html>
+
+<Layout title="Karan Sekar | High-Performance Global Platforms">
+  <header class="site-header">
+    <a href={`${BASE}`} class="brand">
+      <img src={`${BASE}my-logo.jpg`} alt="Karan Sekar Logo" class="logo" />
+    </a>
+
+    <nav class="nav">
+      <a href={`${BASE}#advantage`}>Advantage</a>
+      <a href={`${BASE}#intelligence`}>Intelligence</a>
+      <a href={`${BASE}contact`}>Contact</a>
+      <a href={`${BASE}rentycars`}>RentyCars</a>
+    </nav>
+  </header>
+
+  <main>
+    <Hero />
+    <GlobalEdge />
+    <Intelligence />
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Karan Sekar Agency. All Rights Reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .site-header {
+    padding: 1.5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 110px;
+    height: auto;
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: 0.2s;
+  }
+
+  .nav a:hover {
+    color: #fbbf24;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding: 6rem 1.5rem;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>

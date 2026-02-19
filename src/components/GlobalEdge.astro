@@ -1,23 +1,86 @@
----
-/* Global Edge - All 4 Languages Integrated */
----
 <section id="advantage" class="global-advantage">
-    <h2 class="text-gradient">The Multilingual Mastery</h2>
-    <div class="language-showcase">
-        <div class="lang-card"><h3>English</h3><p>Universal Reach for a global audience.</p></div>
-        <div class="lang-card highlight"><h3>Tamil | தமிழ்</h3><p>Community Authority and local trust.</p></div>
-        <div class="lang-card highlight-mandarin"><h3>Mandarin | 普通话</h3><p>Global Investment and international networks.</p></div>
-        <div class="lang-card"><h3>Spanish | Español</h3><p>Expanding into fast-growing markets.</p></div>
+  <h2 class="text-gradient">The Multilingual Mastery</h2>
+
+  <div class="language-showcase">
+    <div class="lang-card">
+      <h3>English</h3>
+      <p>Universal reach for a global audience.</p>
     </div>
+
+    <div class="lang-card highlight">
+      <h3>Tamil | தமிழ்</h3>
+      <p>Community authority and local trust.</p>
+    </div>
+
+    <div class="lang-card highlight-mandarin">
+      <h3>Mandarin | 普通话</h3>
+      <p>Global investment and international networks.</p>
+    </div>
+
+    <div class="lang-card">
+      <h3>Spanish | Español</h3>
+      <p>Expanding into fast-growing markets.</p>
+    </div>
+  </div>
 </section>
 
 <style>
-    .global-advantage { padding: 6rem 5%; text-align: center; }
-    .text-gradient { background: linear-gradient(to right, #34d399, #a3e635); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem; font-weight: 800; }
-    .language-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    .lang-card { padding: 2.5rem; background: #0d1224; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); text-align: left; }
-    .highlight { border-color: #fbbf24; }
-    .highlight-mandarin { border-color: #ef4444; }
-    h3 { color: #fff; margin-bottom: 1rem; }
-    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
+  .global-advantage {
+    padding: 6rem 5%;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #34d399, #a3e635);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .language-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .lang-card {
+    padding: 2.5rem;
+    background: #0d1224;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    transition: 0.25s;
+  }
+
+  .lang-card:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+    transform: translateY(-4px);
+  }
+
+  .highlight {
+    border-color: rgba(251, 191, 36, 0.6);
+  }
+
+  .highlight-mandarin {
+    border-color: rgba(239, 68, 68, 0.6);
+  }
+
+  h3 {
+    color: #fff;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
 </style>
