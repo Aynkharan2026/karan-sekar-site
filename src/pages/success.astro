@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const BASE = import.meta.env.BASE_URL;
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
 ---
 
 <Layout title="Transmission Received | Karan Sekar">
@@ -8,51 +8,16 @@ const BASE = import.meta.env.BASE_URL;
     <div class="card">
       <h1>Message Received</h1>
       <p>Karan will contact you within 24 hours.</p>
-      <a class="link" href={`${BASE}`}>← Return Home</a>
+      <a class="link" href={BASE}>← Return Home</a>
     </div>
   </main>
 </Layout>
 
 <style>
-  .wrap {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-
-  .card {
-    text-align: center;
-    background: #0d1224;
-    padding: 4rem 3rem;
-    border-radius: 30px;
-    border: 1px solid #10b981;
-    max-width: 560px;
-    width: 100%;
-  }
-
-  h1 {
-    color: #10b981;
-    margin: 0 0 1rem 0;
-    font-size: 2.2rem;
-    font-weight: 900;
-  }
-
-  p {
-    margin: 0 0 2rem 0;
-    color: #94a3b8;
-    line-height: 1.7;
-    font-weight: 600;
-  }
-
-  .link {
-    color: #fbbf24;
-    text-decoration: none;
-    font-weight: 900;
-  }
-
-  .link:hover {
-    color: #fff;
-  }
+  .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+  .card { text-align: center; background: #0d1224; padding: 4rem 3rem; border-radius: 30px; border: 1px solid #10b981; max-width: 560px; width: 100%; }
+  h1 { color: #10b981; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 900; }
+  p { margin: 0 0 2rem 0; color: #94a3b8; line-height: 1.7; font-weight: 600; }
+  .link { color: #fbbf24; text-decoration: none; font-weight: 900; }
+  .link:hover { color: #fff; }
 </style>

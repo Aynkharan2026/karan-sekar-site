@@ -4,20 +4,22 @@ import Hero from "../components/Hero.astro";
 import GlobalEdge from "../components/GlobalEdge.astro";
 import Intelligence from "../components/Intelligence.astro";
 
-const BASE = import.meta.env.BASE_URL;
+// Normalize BASE to ALWAYS end with a trailing slash
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
+const p = (path) => `${BASE}${String(path).replace(/^\//, "")}`;
 ---
 
 <Layout title="Karan Sekar | High-Performance Global Platforms">
   <header class="site-header">
-    <a href={`${BASE}`} class="brand">
-      <img src={`${BASE}my-logo.jpg`} alt="Karan Sekar Logo" class="logo" />
+    <a href={BASE} class="brand">
+      <img src={p("my-logo.jpg")} alt="Karan Sekar Logo" class="logo" />
     </a>
 
     <nav class="nav">
-      <a href={`${BASE}#advantage`}>Advantage</a>
-      <a href={`${BASE}#intelligence`}>Intelligence</a>
-      <a href={`${BASE}contact`}>Contact</a>
-      <a href={`${BASE}rentycars`}>RentyCars</a>
+      <a href={p("#advantage")}>Advantage</a>
+      <a href={p("#intelligence")}>Intelligence</a>
+      <a href={p("contact")}>Contact</a>
+      <a href={p("rentycars")}>RentyCars</a>
     </nav>
   </header>
 
@@ -42,37 +44,12 @@ const BASE = import.meta.env.BASE_URL;
     justify-content: space-between;
     gap: 2rem;
   }
+  .brand { display: inline-flex; align-items: center; text-decoration: none; }
+  .logo { width: 110px; height: auto; display: block; }
 
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .logo {
-    width: 110px;
-    height: auto;
-    display: block;
-  }
-
-  .nav {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .nav a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: 0.2s;
-  }
-
-  .nav a:hover {
-    color: #fbbf24;
-  }
+  .nav { display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: flex-end; }
+  .nav a { color: #94a3b8; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: 0.2s; }
+  .nav a:hover { color: #fbbf24; }
 
   .site-footer {
     text-align: center;
