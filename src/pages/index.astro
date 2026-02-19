@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import myLogo from '../assets/my-logo.jpg';
 import Hero from '../components/Hero.astro';
 import GlobalEdge from '../components/GlobalEdge.astro';
 import Intelligence from '../components/Intelligence.astro';
@@ -15,8 +13,8 @@ import Intelligence from '../components/Intelligence.astro';
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <Image src={myLogo} alt="Karan Sekar Logo" width={50} />
+        <header style="padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto;">
+            <img src="/my-logo.jpg" alt="Karan Sekar Logo" width="100" />
         </header>
 
         <main>
@@ -25,7 +23,7 @@ import Intelligence from '../components/Intelligence.astro';
             <Intelligence />
         </main>
 
-        <footer>
+        <footer style="text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05);">
             <p>&copy; 2026 Karan Sekar Agency. All Rights Reserved.</p>
         </footer>
     </body>
@@ -39,6 +37,4 @@ import Intelligence from '../components/Intelligence.astro';
         font-family: 'Inter', sans-serif;
         margin: 0;
     }
-    header { padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;}
-    footer { text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
 </style>
