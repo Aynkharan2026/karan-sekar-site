@@ -3,38 +3,24 @@ import Hero from '../components/Hero.astro';
 import GlobalEdge from '../components/GlobalEdge.astro';
 import Intelligence from '../components/Intelligence.astro';
 ---
-
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <title>Karan Sekar | High-Performance Global Platforms</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body style="background: #070b14; color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0;">
         <header style="padding: 1.5rem 5%; max-width: 1200px; margin: 0 auto;">
             <img src="/my-logo.jpg" alt="Karan Sekar Logo" style="width: 100px;" />
         </header>
-
         <main>
             <Hero />
             <GlobalEdge />
             <Intelligence />
         </main>
-
         <footer style="text-align: center; padding: 6rem; opacity: 0.4; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05);">
             <p>&copy; 2026 Karan Sekar Agency. All Rights Reserved.</p>
         </footer>
     </body>
 </html>
-
-<style>
-    :global(html) { scroll-behavior: smooth; }
-    :global(body) {
-        background: #070b14;
-        color: #f8fafc;
-        font-family: 'Inter', sans-serif;
-        margin: 0;
-    }
-</style>
